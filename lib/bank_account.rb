@@ -2,7 +2,7 @@ require 'pry'
 
 class BankAccount
     attr_reader :name
-    attr_accessor  :balance,  :status, :deposit
+    attr_accessor  :balance, :status, :deposit
 
     def initialize(name)
         @name = name
@@ -21,7 +21,7 @@ class BankAccount
     def valid?
          self.status == "open" && self.balance > 0
     end
-    
+
     def close_account
         self.status = "closed"
     end
